@@ -67,7 +67,7 @@ task UnitTest -Alias Test -Depends TestInitialize -Description "Run NUnit unit t
 task IntegrationTest -Depends TestInitialize -Description "Run NUnit integration unit tests. " {
     $testDir = Join-Path $root "..\RelativityAgent1\AgentNunitIntegrationTest"
     Write-Host "Test directory is : $testDir"
-    $configSource = "..\RelativityAgent1\AgentNunitIntegrationTest\app.config"
+    $configSource = "C:/smoketest.config"
     Write-Host "configSource is : $configSource"
     $configDestination = Join-Path $root "..\RelativityAgent1\AgentNunitIntegrationTest\bin\Debug\AgentNunitIntegrationTest.dll.config"
     $testAssembly = Join-Path $root "..\RelativityAgent1\AgentNunitIntegrationTest\bin\Debug\AgentNunitIntegrationTest.dll"
